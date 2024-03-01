@@ -1,4 +1,4 @@
-# 🏗 Imps - Built on Scaffold-ETH 2
+# 🏗 Imps - Built with Scaffold-ETH 2
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
