@@ -1,7 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.0;
 
-contract GrantVoting {
+contract GrantExamp {
+
+    mapping(address => bool) public didFund;
+    mapping(address => bool) public didDonate;
+    mapping(address => bool) public didVote;
 
     struct Grant {
         string name;
@@ -24,8 +28,9 @@ contract GrantVoting {
     // Function to vote on a grant
     function voteOnGrant(uint256 grantIndex) external {
         require(grantIndex < grants.length, "Grant does not exist");
+        require(didDonate[msg.sender], "Must have donated to vote");
+        require(didVote[msg.sender] == false, "Already voted");
         grants[grantIndex].voteCount += 1; // Increment the vote count for the grant
-
         emit VoteCast(msg.sender, grantIndex);
     }
 

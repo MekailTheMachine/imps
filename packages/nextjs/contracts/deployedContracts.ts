@@ -6,17 +6,11 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
   31337: {
-    YourContract: {
-      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    GrantExamp: {
+      address: "0x610178dA211FEF7D417bC0e6FeD39F05609AD788",
       abi: [
         {
-          inputs: [
-            {
-              internalType: "address",
-              name: "_owner",
-              type: "address",
-            },
-          ],
+          inputs: [],
           stateMutability: "nonpayable",
           type: "constructor",
         },
@@ -24,62 +18,30 @@ const deployedContracts = {
           anonymous: false,
           inputs: [
             {
-              indexed: true,
+              indexed: false,
               internalType: "address",
-              name: "greetingSetter",
+              name: "voter",
               type: "address",
             },
             {
               indexed: false,
-              internalType: "string",
-              name: "newGreeting",
-              type: "string",
-            },
-            {
-              indexed: false,
-              internalType: "bool",
-              name: "premium",
-              type: "bool",
-            },
-            {
-              indexed: false,
               internalType: "uint256",
-              name: "value",
+              name: "grantIndex",
               type: "uint256",
             },
           ],
-          name: "GreetingChange",
+          name: "VoteCast",
           type: "event",
         },
         {
-          inputs: [],
-          name: "greeting",
-          outputs: [
-            {
-              internalType: "string",
-              name: "",
-              type: "string",
-            },
-          ],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "owner",
-          outputs: [
+          inputs: [
             {
               internalType: "address",
               name: "",
               type: "address",
             },
           ],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "premium",
+          name: "didDonate",
           outputs: [
             {
               internalType: "bool",
@@ -93,24 +55,17 @@ const deployedContracts = {
         {
           inputs: [
             {
-              internalType: "string",
-              name: "_newGreeting",
-              type: "string",
+              internalType: "address",
+              name: "",
+              type: "address",
             },
           ],
-          name: "setGreeting",
-          outputs: [],
-          stateMutability: "payable",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "totalCounter",
+          name: "didFund",
           outputs: [
             {
-              internalType: "uint256",
+              internalType: "bool",
               name: "",
-              type: "uint256",
+              type: "bool",
             },
           ],
           stateMutability: "view",
@@ -124,11 +79,76 @@ const deployedContracts = {
               type: "address",
             },
           ],
-          name: "userGreetingCounter",
+          name: "didVote",
           outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "grantIndex",
+              type: "uint256",
+            },
+          ],
+          name: "getGrant",
+          outputs: [
+            {
+              components: [
+                {
+                  internalType: "string",
+                  name: "name",
+                  type: "string",
+                },
+                {
+                  internalType: "uint256",
+                  name: "funding",
+                  type: "uint256",
+                },
+                {
+                  internalType: "uint256",
+                  name: "voteCount",
+                  type: "uint256",
+                },
+              ],
+              internalType: "struct GrantExamp.Grant",
+              name: "",
+              type: "tuple",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
             {
               internalType: "uint256",
               name: "",
+              type: "uint256",
+            },
+          ],
+          name: "grants",
+          outputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "funding",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "voteCount",
               type: "uint256",
             },
           ],
@@ -136,15 +156,129 @@ const deployedContracts = {
           type: "function",
         },
         {
-          inputs: [],
-          name: "withdraw",
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "grantIndex",
+              type: "uint256",
+            },
+          ],
+          name: "voteOnGrant",
           outputs: [],
           stateMutability: "nonpayable",
           type: "function",
         },
+      ],
+      inheritedFunctions: {},
+    },
+    ImpactEquations: {
+      address: "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+      abi: [
         {
-          stateMutability: "payable",
-          type: "receive",
+          inputs: [
+            {
+              internalType: "uint256[]",
+              name: "R",
+              type: "uint256[]",
+            },
+            {
+              internalType: "uint256",
+              name: "S",
+              type: "uint256",
+            },
+          ],
+          name: "calculateADIA",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "pure",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256[]",
+              name: "R",
+              type: "uint256[]",
+            },
+            {
+              internalType: "uint256",
+              name: "S",
+              type: "uint256",
+            },
+          ],
+          name: "calculateAFIA",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "pure",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256[]",
+              name: "D",
+              type: "uint256[]",
+            },
+            {
+              internalType: "uint256[]",
+              name: "R",
+              type: "uint256[]",
+            },
+            {
+              internalType: "uint256",
+              name: "S",
+              type: "uint256",
+            },
+          ],
+          name: "calculateWDIA",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "pure",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256[]",
+              name: "F",
+              type: "uint256[]",
+            },
+            {
+              internalType: "uint256[]",
+              name: "R",
+              type: "uint256[]",
+            },
+            {
+              internalType: "uint256",
+              name: "S",
+              type: "uint256",
+            },
+          ],
+          name: "calculateWFIA",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "pure",
+          type: "function",
         },
       ],
       inheritedFunctions: {},
