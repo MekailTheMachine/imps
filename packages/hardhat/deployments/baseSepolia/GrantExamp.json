@@ -1,0 +1,298 @@
+{
+  "address": "0xbF54Dd38d6480EF908f33Ace05Fd5eD2237A5CE1",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "voter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "grantIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "VoteCast",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "didDonate",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "didFund",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "didVote",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "grantIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "getGrant",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "funding",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "voteCount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct GrantExamp.Grant",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "grants",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "funding",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "voteCount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "grantIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "voteOnGrant",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x71196480789c22ef3e094b2e1b228cfd2d2243cb25de478a61d0e57013f5fb4a",
+  "receipt": {
+    "to": null,
+    "from": "0x0b130fd03fA70571BB05197422B8e153CAc6bC65",
+    "contractAddress": "0xbF54Dd38d6480EF908f33Ace05Fd5eD2237A5CE1",
+    "transactionIndex": 5,
+    "gasUsed": "579469",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x89ee87d8d35372a7f29c0f502168c11beae84bdea6cd44a1e0c8a55a6d29a462",
+    "transactionHash": "0x71196480789c22ef3e094b2e1b228cfd2d2243cb25de478a61d0e57013f5fb4a",
+    "logs": [],
+    "blockNumber": 6811778,
+    "cumulativeGasUsed": "1321279",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "7733f8415ee6ff67439fc7a4ae1aa7c8",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"grantIndex\",\"type\":\"uint256\"}],\"name\":\"VoteCast\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"didDonate\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"didFund\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"didVote\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"grantIndex\",\"type\":\"uint256\"}],\"name\":\"getGrant\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"funding\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"voteCount\",\"type\":\"uint256\"}],\"internalType\":\"struct GrantExamp.Grant\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"grants\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"funding\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"voteCount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"grantIndex\",\"type\":\"uint256\"}],\"name\":\"voteOnGrant\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/GrantExamp.sol\":\"GrantExamp\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/GrantExamp.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ncontract GrantExamp {\\n\\n    mapping(address => bool) public didFund;\\n    mapping(address => bool) public didDonate;\\n    mapping(address => bool) public didVote;\\n\\n    struct Grant {\\n        string name;\\n        uint256 funding;\\n        uint256 voteCount;\\n    }\\n\\n    Grant[] public grants;\\n\\n    // Event to emit when a vote is cast\\n    event VoteCast(address voter, uint256 grantIndex);\\n\\n    constructor() {\\n        // Initialize with 3 fake grants, each with random fake funding\\n        grants.push(Grant(\\\"Grant A\\\", 1000, 0));\\n        grants.push(Grant(\\\"Grant B\\\", 500, 0));\\n        grants.push(Grant(\\\"Grant C\\\", 1500, 0));\\n    }\\n\\n    // Function to vote on a grant\\n    function voteOnGrant(uint256 grantIndex) external {\\n        require(grantIndex < grants.length, \\\"Grant does not exist\\\");\\n        require(didDonate[msg.sender], \\\"Must have donated to vote\\\");\\n        require(didVote[msg.sender] == false, \\\"Already voted\\\");\\n        grants[grantIndex].voteCount += 1; // Increment the vote count for the grant\\n        emit VoteCast(msg.sender, grantIndex);\\n    }\\n\\n    // Function to get grant details\\n    function getGrant(uint256 grantIndex) external view returns (Grant memory) {\\n        require(grantIndex < grants.length, \\\"Grant does not exist\\\");\\n        return grants[grantIndex];\\n    }\\n}\\n\",\"keccak256\":\"0x34088306c2844f642fa460a2af83b08f583783e0f815bfb251135c9418bf19a2\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040805160a081018252600760608201908152664772616e74204160c81b608083015281526103e8602082015260009181018290526003805460018101825592819052815191920260008051602061096183398151915201908190610076908261023d565b50602082810151600180840191909155604093840151600290930192909255825160a0810184526007606082019081526623b930b73a102160c91b608083015281526101f4918101919091526000928101839052600380549283018155928390528051909291909102600080516020610961833981519152019081906100fc908261023d565b50602082810151600180840191909155604093840151600290930192909255825160a081018452600760608201908152664772616e74204360c81b608083015281526105dc91810191909152600092810183905260038054928301815592839052805190929190910260008051602061096183398151915201908190610182908261023d565b50602082015181600101556040820151816002015550506102fc565b634e487b7160e01b600052604160045260246000fd5b600181811c908216806101c857607f821691505b6020821081036101e857634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561023857600081815260208120601f850160051c810160208610156102155750805b601f850160051c820191505b8181101561023457828155600101610221565b5050505b505050565b81516001600160401b038111156102565761025661019e565b61026a8161026484546101b4565b846101ee565b602080601f83116001811461029f57600084156102875750858301515b600019600386901b1c1916600185901b178555610234565b600085815260208120601f198616915b828110156102ce578886015182559484019460019091019084016102af565b50858210156102ec5787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b6106568061030b6000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80630c0debea14610067578063354d91de1461009257806342a0f201146100c5578063b8cc6c93146100e8578063bc8cdfe014610108578063e50a7f6f1461011d575b600080fd5b61007a6100753660046104b9565b610140565b60405161008993929190610518565b60405180910390f35b6100b56100a036600461053d565b60026020526000908152604090205460ff1681565b6040519015158152602001610089565b6100b56100d336600461053d565b60016020526000908152604090205460ff1681565b6100fb6100f63660046104b9565b610202565b604051610089919061056d565b61011b6101163660046104b9565b61034c565b005b6100b561012b36600461053d565b60006020819052908152604090205460ff1681565b6003818154811061015057600080fd5b9060005260206000209060030201600091509050806000018054610173906105a9565b80601f016020809104026020016040519081016040528092919081815260200182805461019f906105a9565b80156101ec5780601f106101c1576101008083540402835291602001916101ec565b820191906000526020600020905b8154815290600101906020018083116101cf57829003601f168201915b5050505050908060010154908060020154905083565b61022660405180606001604052806060815260200160008152602001600081525090565b60035482106102735760405162461bcd60e51b815260206004820152601460248201527311dc985b9d08191bd95cc81b9bdd08195e1a5cdd60621b60448201526064015b60405180910390fd5b60038281548110610286576102866105e3565b90600052602060002090600302016040518060600160405290816000820180546102af906105a9565b80601f01602080910402602001604051908101604052809291908181526020018280546102db906105a9565b80156103285780601f106102fd57610100808354040283529160200191610328565b820191906000526020600020905b81548152906001019060200180831161030b57829003601f168201915b50505050508152602001600182015481526020016002820154815250509050919050565b60035481106103945760405162461bcd60e51b815260206004820152601460248201527311dc985b9d08191bd95cc81b9bdd08195e1a5cdd60621b604482015260640161026a565b3360009081526001602052604090205460ff166103f35760405162461bcd60e51b815260206004820152601960248201527f4d757374206861766520646f6e6174656420746f20766f746500000000000000604482015260640161026a565b3360009081526002602052604090205460ff16156104435760405162461bcd60e51b815260206004820152600d60248201526c105b1c9958591e481d9bdd1959609a1b604482015260640161026a565b600160038281548110610458576104586105e3565b9060005260206000209060030201600201600082825461047891906105f9565b909155505060408051338152602081018390527fa36cc2bebb74db33e9f88110a07ef56e1b31b24b4c4f51b54b1664266e29f45b910160405180910390a150565b6000602082840312156104cb57600080fd5b5035919050565b6000815180845260005b818110156104f8576020818501810151868301820152016104dc565b506000602082860101526020601f19601f83011685010191505092915050565b60608152600061052b60608301866104d2565b60208301949094525060400152919050565b60006020828403121561054f57600080fd5b81356001600160a01b038116811461056657600080fd5b9392505050565b60208152600082516060602084015261058960808401826104d2565b905060208401516040840152604084015160608401528091505092915050565b600181811c908216806105bd57607f821691505b6020821081036105dd57634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052603260045260246000fd5b8082018082111561061a57634e487b7160e01b600052601160045260246000fd5b9291505056fea2646970667358221220aafebd25ce50ae31bdf57b59bbd1c0ea9979a27e5a1b81687ca1d5f76911876964736f6c63430008110033c2575a0e9e593c00f959f8c92f12db2869c3395a3b0502d05e2516446f71f85b",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80630c0debea14610067578063354d91de1461009257806342a0f201146100c5578063b8cc6c93146100e8578063bc8cdfe014610108578063e50a7f6f1461011d575b600080fd5b61007a6100753660046104b9565b610140565b60405161008993929190610518565b60405180910390f35b6100b56100a036600461053d565b60026020526000908152604090205460ff1681565b6040519015158152602001610089565b6100b56100d336600461053d565b60016020526000908152604090205460ff1681565b6100fb6100f63660046104b9565b610202565b604051610089919061056d565b61011b6101163660046104b9565b61034c565b005b6100b561012b36600461053d565b60006020819052908152604090205460ff1681565b6003818154811061015057600080fd5b9060005260206000209060030201600091509050806000018054610173906105a9565b80601f016020809104026020016040519081016040528092919081815260200182805461019f906105a9565b80156101ec5780601f106101c1576101008083540402835291602001916101ec565b820191906000526020600020905b8154815290600101906020018083116101cf57829003601f168201915b5050505050908060010154908060020154905083565b61022660405180606001604052806060815260200160008152602001600081525090565b60035482106102735760405162461bcd60e51b815260206004820152601460248201527311dc985b9d08191bd95cc81b9bdd08195e1a5cdd60621b60448201526064015b60405180910390fd5b60038281548110610286576102866105e3565b90600052602060002090600302016040518060600160405290816000820180546102af906105a9565b80601f01602080910402602001604051908101604052809291908181526020018280546102db906105a9565b80156103285780601f106102fd57610100808354040283529160200191610328565b820191906000526020600020905b81548152906001019060200180831161030b57829003601f168201915b50505050508152602001600182015481526020016002820154815250509050919050565b60035481106103945760405162461bcd60e51b815260206004820152601460248201527311dc985b9d08191bd95cc81b9bdd08195e1a5cdd60621b604482015260640161026a565b3360009081526001602052604090205460ff166103f35760405162461bcd60e51b815260206004820152601960248201527f4d757374206861766520646f6e6174656420746f20766f746500000000000000604482015260640161026a565b3360009081526002602052604090205460ff16156104435760405162461bcd60e51b815260206004820152600d60248201526c105b1c9958591e481d9bdd1959609a1b604482015260640161026a565b600160038281548110610458576104586105e3565b9060005260206000209060030201600201600082825461047891906105f9565b909155505060408051338152602081018390527fa36cc2bebb74db33e9f88110a07ef56e1b31b24b4c4f51b54b1664266e29f45b910160405180910390a150565b6000602082840312156104cb57600080fd5b5035919050565b6000815180845260005b818110156104f8576020818501810151868301820152016104dc565b506000602082860101526020601f19601f83011685010191505092915050565b60608152600061052b60608301866104d2565b60208301949094525060400152919050565b60006020828403121561054f57600080fd5b81356001600160a01b038116811461056657600080fd5b9392505050565b60208152600082516060602084015261058960808401826104d2565b905060208401516040840152604084015160608401528091505092915050565b600181811c908216806105bd57607f821691505b6020821081036105dd57634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052603260045260246000fd5b8082018082111561061a57634e487b7160e01b600052601160045260246000fd5b9291505056fea2646970667358221220aafebd25ce50ae31bdf57b59bbd1c0ea9979a27e5a1b81687ca1d5f76911876964736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 5,
+        "contract": "contracts/GrantExamp.sol:GrantExamp",
+        "label": "didFund",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_bool)"
+      },
+      {
+        "astId": 9,
+        "contract": "contracts/GrantExamp.sol:GrantExamp",
+        "label": "didDonate",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_bool)"
+      },
+      {
+        "astId": 13,
+        "contract": "contracts/GrantExamp.sol:GrantExamp",
+        "label": "didVote",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_bool)"
+      },
+      {
+        "astId": 24,
+        "contract": "contracts/GrantExamp.sol:GrantExamp",
+        "label": "grants",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_array(t_struct(Grant)20_storage)dyn_storage"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_struct(Grant)20_storage)dyn_storage": {
+        "base": "t_struct(Grant)20_storage",
+        "encoding": "dynamic_array",
+        "label": "struct GrantExamp.Grant[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Grant)20_storage": {
+        "encoding": "inplace",
+        "label": "struct GrantExamp.Grant",
+        "members": [
+          {
+            "astId": 15,
+            "contract": "contracts/GrantExamp.sol:GrantExamp",
+            "label": "name",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 17,
+            "contract": "contracts/GrantExamp.sol:GrantExamp",
+            "label": "funding",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 19,
+            "contract": "contracts/GrantExamp.sol:GrantExamp",
+            "label": "voteCount",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "96"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

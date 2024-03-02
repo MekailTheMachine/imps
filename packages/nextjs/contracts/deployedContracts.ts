@@ -5,9 +5,9 @@
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
-  31337: {
+  84532: {
     GrantExamp: {
-      address: "0x610178dA211FEF7D417bC0e6FeD39F05609AD788",
+      address: "0xbF54Dd38d6480EF908f33Ace05Fd5eD2237A5CE1",
       abi: [
         {
           inputs: [],
@@ -172,7 +172,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     ImpactEquations: {
-      address: "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+      address: "0x0234E25474772BD5724632Ccf3ADE843fD5446EC",
       abi: [
         {
           inputs: [
