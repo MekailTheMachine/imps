@@ -1,11 +1,11 @@
-IMPs (Litepaper v1)
+# IMPs (Litepaper v1)
 Abstract
 Poor social health, poverty, lack of social programs and overall coordination lie at the roots of our inability to healthily progress as a species. Giving citizens more political power and insights on the inner mechanics of their social systems is now more possible than ever.
 In our pursuit of enhancing community engagement we must carefully consider the operating systems and models underpinning our communities and organizations. 
 These systems, which have evolved over thousands of years, remain central to our collective existence yet the opaque and arcane nature of many of these systems often undermines trust and inhibits meaningful community interaction. 
 This opacity and lack of coordination can discourage engagement, and make it difficult and inefficient to operate. With today’s technology we have the power to mitigate many of the social issues described above, even litigatory behavior amongst HOAs and Homeowners, Non-profits, and more. To generate more trust, participation, and symbiosis within our underlying social infrastructures,we must focus on the development of our political infrastructures, underlying governance models, and approaches on bridging the two. 
 
-Problem Statement
+# Problem Statement
 Non-profit organizations in the United States control over $2 trillion in assets, according to the National Center for Charitable Statistics.
 The American tax system collects over $3.5 trillion each year, according to the IRS.
 Despite being one of the world's oldest democracies, the United States often sees less than 60% of its eligible voters participate in presidential elections, according to the United States Elections Project.
@@ -14,7 +14,7 @@ Nearly 40 million Americans live in poverty, according to the U.S. Census Bureau
 Our primary motivation is to tackle existing gaps in incentive models for public goods funding. Traditional mechanisms lack transparency and accountability, leading to not just inefficiencies in fund allocation and utilization but weakens relationships among funders, donors, and grantees.
 By shaping the way we hold grantees accountable, we can enhance coherence between individuals and their local communities through public goods funding, enhancing individuals’ feelings of ownership, community, and voice. We hope these factors can greatly increase individuals' sense of purpose within their communities, and the efficiency in capital allocation for communities.
 
-Problem Statement Continued
+#  Problem Statement Continued
 
 Corruption and Fraud in Political Structures
 Structures, such as city councils and municipal governments, are responsible for managing public funds and ensuring that they are used effectively for the benefit of the community. However, corruption and fraud can undermine the efficient use of these resources, leading to:
@@ -36,12 +36,12 @@ With these tools we can provide alternative funding solutions to struggling nonp
 
 
 
-Architecture
+# Architecture
 
 By integrating technologies like ERC6506, ERC1155 Impact certificates, Ethereum Attestation Services, custom Allo v2 strategies within a dynamic UI Our project aims to provide immutable yet dynamic on-chain reports and assessments on how funds are being utilized, with integrated accountability mechanisms.
 Reports are dynamic in the sense that they can be expanded upon, graded, measured, and scored over time by the donors or participants of that project or ecosystem. These measurements can be adjusted by the deployers of the contracts to fit their communities needs, with little to no code experience required.
 
-Implementation
+# Implementation
 
 By optimizing initially for individual use cases, we can provide a platform for humanitarian relief on an individual basis, allowing individuals to better understand the processes larger entities could take on in being more transparent and accountable with their funding.
 After successfully testing our genesis governance models, we will begin working with and implementing the mechanisms into local charities, non-profits, and eventually HOAs.
@@ -55,14 +55,14 @@ Similar to a computer’s operating system there remains a sort of “black box�
 This analogy can provide useful insights into the usually obscured realm of organizational culture. It provides us with a set of conceptual tools that help identify areas where deliberate choices can influence the organization's modus operandi.
 
 
-Roadmap
+# Roadmap
 
 The Impact Measurement Protocols (IMPs) represent a pioneering venture within a broader spectrum of projects, movements, and initiatives spearheaded by Ninit. Since its inception in 2018, Ninit has been composed of a dedicated team of experts with a deep commitment to exploring, analyzing, and innovating within the realms of governance and economic sustainability. IMPs stand at the forefront of this ambitious journey, embodying our first significant step towards actualizing a vision for more transparent, accountable, and effective governance systems. This project is not just an isolated endeavor but a foundational piece in a much larger puzzle. We aim to set new standards in how governance and economic systems can be designed to be more inclusive, equitable, and capable of addressing the complex challenges of our time.
-Looking ahead, Ninit envisions a series of interconnected projects that build upon the groundwork laid by IMPs. Each subsequent initiative will delve deeper into specific aspects of governance and economics, from enhancing community engagement and participation to fostering economic models that prioritize long-term sustainability over short-term gains.          Our ultimate goal is to create a cohesive ecosystem of solutions that can work in harmony to transform the landscape of governance and economics, making them more adaptable, resilient, and aligned with the principles of regeneration and inclusivity.
+Looking ahead, Ninit envisions a series of interconnected projects that build upon the groundwork laid by IMPs. Each subsequent initiative will delve deeper into specific aspects of governance and economics, from enhancing community engagement and participation to fostering economic models that prioritize long-term sustainability over short-term gains. Our ultimate goal is to create a cohesive ecosystem of solutions that can work in harmony to transform the landscape of governance and economics, making them more adaptable, resilient, and aligned with the principles of regeneration and inclusivity.
 
 
 
-Conclusion
+# Conclusion
 
 In harnessing the power of advanced data collection methodologies and in-depth analysis, we have unearthed pivotal insights that herald the dawn of a new paradigm in governance—one that is more equitable, inclusive, and attuned to the nuanced needs of our society. Our research serves as a cornerstone for the evolution of governance into an era marked by empathy and digital inclusivity, where technology is not just a tool but a bridge to understanding and meeting the diverse needs of communities across the globe.
 This endeavor underscores the critical importance of agility and continuous evolution within our social infrastructures, advocating for systems that are not only responsive but also resilient in the face of the relentless pace of societal and technological change. It is a clarion call to recenter the aspirations and voices of individuals within the technological narrative, empowering them to shape their communities in profoundly impactful ways.
