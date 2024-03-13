@@ -94,7 +94,11 @@ export const Header = () => {
           </div>
           <div className="flex flex-col">
             <span className="font-bold leading-tight">IMPS</span>
+<<<<<<< HEAD
             <span className="text-xs">Impact Protocol Solutions</span>
+=======
+            <span className="text-xs">Impact Measurement Protocols</span>
+>>>>>>> 65f0de4a6c5b42e58bbf25e694655461309edcb3
           </div>
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">

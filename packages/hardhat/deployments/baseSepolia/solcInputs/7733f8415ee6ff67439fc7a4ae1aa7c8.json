@@ -1,0 +1,38 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/GrantExamp.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract GrantExamp {\n\n    mapping(address => bool) public didFund;\n    mapping(address => bool) public didDonate;\n    mapping(address => bool) public didVote;\n\n    struct Grant {\n        string name;\n        uint256 funding;\n        uint256 voteCount;\n    }\n\n    Grant[] public grants;\n\n    // Event to emit when a vote is cast\n    event VoteCast(address voter, uint256 grantIndex);\n\n    constructor() {\n        // Initialize with 3 fake grants, each with random fake funding\n        grants.push(Grant(\"Grant A\", 1000, 0));\n        grants.push(Grant(\"Grant B\", 500, 0));\n        grants.push(Grant(\"Grant C\", 1500, 0));\n    }\n\n    // Function to vote on a grant\n    function voteOnGrant(uint256 grantIndex) external {\n        require(grantIndex < grants.length, \"Grant does not exist\");\n        require(didDonate[msg.sender], \"Must have donated to vote\");\n        require(didVote[msg.sender] == false, \"Already voted\");\n        grants[grantIndex].voteCount += 1; // Increment the vote count for the grant\n        emit VoteCast(msg.sender, grantIndex);\n    }\n\n    // Function to get grant details\n    function getGrant(uint256 grantIndex) external view returns (Grant memory) {\n        require(grantIndex < grants.length, \"Grant does not exist\");\n        return grants[grantIndex];\n    }\n}\n"
+    },
+    "contracts/ImpactEquations.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract ImpactEquations {\n\n    // Variables as defined in the image\n    // S: Reviews Total\n    // R: Review Score\n    // D: Donor\n    // F: Funder\n    // Θ: Contribution Ratio to Pool\n\n    // Function for aDIA: ∑ (D * R) / S\n    function calculateADIA(uint256[] memory R, uint256 S) public pure returns (uint256) {\n        uint256 sum = 0;\n        for (uint256 i = 0; i < R.length; i++) {\n            sum += R[i];\n        }\n        return sum / S;\n    }\n\n    // Function for wDIA: ∑ (D * R(D)) / S\n    function calculateWDIA(uint256[] memory D, uint256[] memory R, uint256 S) public pure returns (uint256) {\n        uint256 weightedSum = 0;\n        for (uint256 i = 0; i < D.length; i++) {\n            weightedSum += D[i] * R[i];\n        }\n        return weightedSum / S;\n    }\n\n    // Function for aFIA: ∑ (F * R) / S\n    function calculateAFIA(uint256[] memory R, uint256 S) public pure returns (uint256) {\n        uint256 sum = 0;\n        for (uint256 i = 0; i < R.length; i++) {\n            sum += R[i];\n        }\n        return sum / S;\n    }\n\n    // Function for wFIA: ∑ (F * R(F)) / S\n    function calculateWFIA(uint256[] memory F, uint256[] memory R, uint256 S) public pure returns (uint256) {\n        uint256 weightedSum = 0;\n        for (uint256 i = 0; i < F.length; i++) {\n            weightedSum += F[i] * R[i];\n        }\n        return weightedSum / S;\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
