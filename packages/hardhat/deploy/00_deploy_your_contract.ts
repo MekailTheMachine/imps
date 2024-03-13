@@ -14,13 +14,55 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
 
     When deploying to live networks (e.g `yarn deploy --network goerli`), the deployer account
     should have sufficient balance to pay for the gas fees for contract creation.
-
     You can generate a random account with `yarn generate` which will fill DEPLOYER_PRIVATE_KEY
     with a random private key in the .env file (then used on hardhat.config.ts)
     You can run the `yarn account` command to check your balance in every network.
   */
+
+    
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
+
+  const Note_Acceptor_contract = await deploy("Note_Acceptor", {
+    from: deployer,
+    args: ['0x72e4f9f808c49a2a61de9c5896298920dc4eeea9'],
+    log: true,
+    autoMine: true,
+  });
+
+  const verifier_contract = await deploy("Eippy", {
+    from: deployer,
+    args: ["FundFactory", "1"],
+    log: true,
+    autoMine: true,
+  });
+  
+
+  const profile_verifier_contract = await deploy("Profile", {
+    from: deployer,
+    args: ["Profile", "1"],
+    log: true,
+    autoMine: true,
+  });
+
+  const ffactor = await deploy("FundFactory", {
+    from: deployer,
+    // Contract constructor arguments
+    args: [verifier_contract.address],
+    log: true,
+    // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
+    // automatically mining the contract deployment transaction. There is no effect on live networks.
+    autoMine: true,
+  });
+
+
+  await deploy("FundMy", {
+    from: deployer,
+    // Contract constructor arguments
+    args: [ffactor.address, "0x9EEF30cb89EA5e8502B37Fa08cc3E1892cA00b10", 100, 10000, 10000, 0],
+    log: true,
+    autoMine: true,
+  });
 
   await deploy("YourContract", {
     from: deployer,
