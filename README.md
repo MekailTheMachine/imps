@@ -32,7 +32,6 @@ flowchart
 
     PoolManager/Recipient/Allocator --> |invoke function unique to strategy implmentation|BaseStrategy.sol
 
-    User --> |Me
 ```
 
 
