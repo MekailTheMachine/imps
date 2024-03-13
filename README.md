@@ -2,6 +2,23 @@
 
 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
+## Supported Networks
+
+| Network         | Chain ID |
+| --------------- | -------- |
+| Mainnet         | 1        |
+| Goerli          | 5        |
+| Sepolia         | 11155111 |
+| Base            | 8453     |
+| Base Goerli     | 84531    |
+| Optimism        | 10       |
+| Optimism Goerli | 420      |
+| Celo            | 42220    |
+| Celo Alfajores  | 44787    |
+| Arbitrum        | 42161    |
+| Arbitrum Sepolia| 421614   |
+
+
 ⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, Allo, EAS, and Hypercert. 
 
 # Objective 
