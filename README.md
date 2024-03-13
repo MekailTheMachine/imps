@@ -21,6 +21,19 @@
 
 ⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, Allo, EAS, and Hypercert. 
 
+## Diagram
+
+```mermaid
+flowchart
+    Actor --> |profile management| Registry.sol --> |deploys|Anchor.sol
+    PoolManager --> |createPool for profile| Allo.sol --> |validate profile| Registry.sol
+
+    PoolManager --> |pool manager actions| Allo.sol --> |invoke pool function| BaseStrategy.sol
+
+    PoolManager/Recipient/Allocator --> |invoke function unique to strategy implmentation|BaseStrategy.sol
+```
+
+
 # Objective 
 
 Our goal is to create protocols where users of a grants stack or application can close the transparency and accountability gaps in traditional public goods funding mechanisms. This will make funding more efficient and strengthen the bond between funders, donors, grantees, and their communities, fostering a sense of ownership, community, and purpose. We believe that this innovative approach can help increase public good funding and support important causes.
