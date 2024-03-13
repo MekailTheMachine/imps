@@ -24,13 +24,28 @@
 ## Diagram
 
 ```mermaid
-flowchart
-    Actor --> |profile management| Registry.sol --> |deploys|Anchor.sol
-    PoolManager --> |createPool for profile| Allo.sol --> |validate profile| Registry.sol
+graph TD
+    Actor(Actor: User) -->|Manages Profile| Registry{{Registry Contract}}
+    Registry -->|Deploys| Anchor{{Anchor Contract}}
+    PoolManager(Pool Manager) -->|Creates Pool for Profile| Allo{{Allo Contract}}
+    Allo -->|Validates Profile| Registry
+    
+    PoolManager -->|Manages Pool| Allo
+    Allo -->|Invokes Pool Functions| BaseStrategy{{Base Strategy Contract}}
+    
+    PoolManager_Recipient_Allocator(Pool Manager/Recipient/Allocator) -->|Invokes Strategy-Specific Functions| BaseStrategy
+    
+    Donor_Funder(Donor/Funder) -->|Funds Pool| Allo
+    Donor_Funder -->|Votes on Proposals| VotingContract{{Voting Contract}}
+    VotingContract -->|Checks Funding Status| Allo
+    VotingContract -->|Ensures Voting Threshold| VotingThreshold{{Voting Threshold Check}}
+    VotingThreshold -->|Feedback to Voting| VotingContract
 
-    PoolManager --> |pool manager actions| Allo.sol --> |invoke pool function| BaseStrategy.sol
+    classDef contracts fill:#b5e48c,stroke:#333,stroke-width:2px;
+    classDef users fill:#76c893,stroke:#333,stroke-width:2px;
+    class Actor,PoolManager,PoolManager_Recipient_Allocator,Donor_Funder users;
+    class Registry,Anchor,Allo,BaseStrategy,VotingContract,VotingThreshold contracts;
 
-    PoolManager/Recipient/Allocator --> |invoke function unique to strategy implmentation|BaseStrategy.sol
 
 ```
 
