@@ -31,6 +31,8 @@ flowchart
     PoolManager --> |pool manager actions| Allo.sol --> |invoke pool function| BaseStrategy.sol
 
     PoolManager/Recipient/Allocator --> |invoke function unique to strategy implmentation|BaseStrategy.sol
+
+    User --> |Me
 ```
 
 
