@@ -54,7 +54,7 @@ graph TD
 
 Our goal is to create protocols where users of a grants stack or application can close the transparency and accountability gaps in traditional public goods funding mechanisms. This will make funding more efficient and strengthen the bond between funders, donors, grantees, and their communities, fostering a sense of ownership, community, and purpose. We believe that this innovative approach can help increase public good funding and support important causes.
 
-```
+```mermaid
 graph TD
     Donor_Funder(Donor/Funder) -->|Funds| GrantContract(Grant Contract)
     Donor_Funder -->|Contributes to| QFPool(QF Pool)
