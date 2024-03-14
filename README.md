@@ -174,6 +174,4 @@ Our team consists of experienced developers and experts in the Political and DeF
 
 ## Contributing to Scaffold-ETH 2
 
-We welcome contributions to Scaffold-ETH 2!
-
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+We welcome contributions to IMPs! Create a branch and request to push your updates!
