@@ -2,7 +2,7 @@
 
 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
-#Abstract
+# Abstract
 
 Poor social health, poverty, lack of social programs and overall coordination lie at the roots of our inability to healthily progress as a species. Giving citizens more political power and insights on the inner mechanics of their social systems is now more possible than ever.
 In our pursuit of enhancing community engagement we must carefully consider the operating systems and models underpinning our communities and organizations. 
