@@ -1,6 +1,6 @@
 # Imps - Built with Scaffold-ETH 2
 
-🧪 Built using Scaffold-Eth-2; an open-source up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+🧪 Built using Scaffold-Eth-2; an open-source up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts. 'https://github.com/scaffold-eth/scaffold-eth-2'
 
 - ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
 - 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
@@ -97,7 +97,10 @@ The `Anchor` contract is a vital component that enhances the capabilities of pro
 At the heart of the Allo Protocol lies the `Allo` contract, a versatile and feature-rich smart contract that enables efficient and decentralized fund allocation and distribution. The contract encompasses mechanisms for handling fees, managing treasury, and defining access controls. Its comprehensive design is composed of distinct functions, variables, modifiers, and events that collaboratively enable a robust fund management framework.
 
 "The Allo Protocol is a technologically advanced framework for decentralized fund allocation and distribution. By employing the `Registry`, `Anchor`, and `Allo` contracts in tandem, the protocol establishes an ecosystem where users can securely manage their funds, define strategies, and participate in a DeFi ecosystem that embodies transparency and user-centric governance."
-Custom Strategy visualization:
+
+Check out the current chart in Allo's docs here: https://github.com/allo-protocol/allo-v2
+Below is an implementation of a custom strategy into Allo protocol.
+
 
 ```mermaid
 graph TD
