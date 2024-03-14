@@ -170,8 +170,5 @@ graph TD
 
 # About us 
 
-Our team consists of experienced developers and experts in the Political and DeFi space. With shared history in working with non-profits and tracking federal grants funding allocated to under resourced communities, we are passionate about using technology for social good. We believe that IMPs has the potential to fill in the larger remaining gaps in public goods funding incetives within local communities. 
+Our team consists of experienced developers and experts in the Political and DeFi space. With shared history in working with non-profits and tracking federal grants funding allocated to under resourced communities, we are passionate about using technology for social good. We believe that IMPs has the potential to fill in the larger remaining gaps in public goods funding incetives within local communities. Crafted by Novus Initium.
 
-## Contributing to Scaffold-ETH 2
-
-We welcome contributions to IMPs! Create a branch and request to push your updates!
