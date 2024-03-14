@@ -79,7 +79,24 @@ Run smart contract test with `yarn hardhat:test`
 
 ⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, AlloV2, EAS, ERC1155 Hypercerts and more. 
 
-## Diagram
+## AlloV2
+
+### Registry Contract (`Registry.sol`)
+
+The `Registry` contract serves as the foundational building block of the Allo Protocol. It facilitates the creation, attestation, and management of profiles. A profile is a unique entity representing a user's identity within the protocol. This contract offers functions to query profiles by ID and anchor, as well as to create new profiles with personalized metadata, attestation addresses, and members.
+
+Each time a profile generates a new anchor (during profile creation or when profile name is updated), it triggers the deployment of an Anchor Contract. These Anchor Contracts serve as versatile tools that can receive funds or fulfill other designated purposes. This dynamic mechanism enables profiles to engage in a wide array of activities within the protocol, enhancing flexibility and functionality across the Allo ecosystem.
+
+
+### Anchor Contract (`Anchor.sol`)
+
+The `Anchor` contract is a vital component that enhances the capabilities of profiles. It acts as an isolated enclave, allowing profile owners to securely interact with external addresses. Profile owners can execute calls to target addresses while maintaining control over the amount of native tokens sent and the data transmitted. This contract leverages the `Registry` contract for verifying ownership, ensuring that only authorized users can utilize its functionality.
+
+### Allo Contract (`Allo.sol`)
+
+At the heart of the Allo Protocol lies the `Allo` contract, a versatile and feature-rich smart contract that enables efficient and decentralized fund allocation and distribution. The contract encompasses mechanisms for handling fees, managing treasury, and defining access controls. Its comprehensive design is composed of distinct functions, variables, modifiers, and events that collaboratively enable a robust fund management framework.
+
+"The Allo Protocol is a technologically advanced framework for decentralized fund allocation and distribution. By employing the `Registry`, `Anchor`, and `Allo` contracts in tandem, the protocol establishes an ecosystem where users can securely manage their funds, define strategies, and participate in a DeFi ecosystem that embodies transparency and user-centric governance."
 
 ```mermaid
 graph TD
@@ -120,6 +137,15 @@ This can be accomplished by integrating systems where grantees can link tangible
 Within AlloV2 Custom strategies, we can alter the flow of streamline or batch-based Quadratic Funding. Donors and funders can seperately review the impact reports within the grants they have contributed to, and weight their votes on how impactful they feel the project currently is. These voted weights can have negative affects on the grantees share of the QF pool, urging them to provide more impactful reports, or to reach out to funders or donors to address their attestation and attempt a resolve. 
 
 By integrating the Scaffold-Eth-2 SDK we can allow any project or community to create their own custom funding strategy, questions, weights, and more. Abstracting the process of implementing custom strategies and deploying custom rounds with enhanced governance mechanisms will be an ever lasting journey. Below is a visualization of the reviewment process using a custom alloV2 protocol.
+
+# Overall Interaction
+
+1. Users create profiles in the `Registry` contract and associate their addresses with specific roles and permissions.
+2. Users, identified by their addresses and associated profiles, interact with the `Allo` contract to create pools, allocate funds, and manage pools.
+3. The `Allo` contract checks user profiles with the `Registry` to ensure that only authorized users perform certain actions.
+4. Strategies (inherited from `BaseStrategy`) within the `Allo` contract handle allocation, distribution, and management of funds based on specific logic.
+5. The `Anchor` contract allows for dynamic execution of arbitrary calls based on predefined conditions, often triggered by events in the `Allo` ecosystem.
+6. Together, these contracts create an ecosystem where users can manage and allocate funds according to various strategies while adhering to predefined permissions and conditions.
 
 ```mermaid
 graph TD
